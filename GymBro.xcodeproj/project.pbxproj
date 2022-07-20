@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213772292886ED9C006A9D4A /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213772282886ED9C006A9D4A /* LayoutView.swift */; };
+		2137722B2886F7CD006A9D4A /* ByMuscleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137722A2886F7CD006A9D4A /* ByMuscleScreen.swift */; };
+		2137722F288729CB006A9D4A /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137722E288729CB006A9D4A /* GifView.swift */; };
+		213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213772332887313D006A9D4A /* WorkoutCardView.swift */; };
 		2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168715D2886EBE5007757C8 /* GymBroApp.swift */; };
 		216871602886EBE5007757C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168715F2886EBE5007757C8 /* ContentView.swift */; };
 		216871622886EBE9007757C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216871612886EBE9007757C8 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213772282886ED9C006A9D4A /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		2137722A2886F7CD006A9D4A /* ByMuscleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByMuscleScreen.swift; sourceTree = "<group>"; };
+		2137722E288729CB006A9D4A /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		213772332887313D006A9D4A /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
 		2168715A2886EBE5007757C8 /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2168715D2886EBE5007757C8 /* GymBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBroApp.swift; sourceTree = "<group>"; };
 		2168715F2886EBE5007757C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,11 +63,13 @@
 		2168715C2886EBE5007757C8 /* GymBro */ = {
 			isa = PBXGroup;
 			children = (
+				216871732886EC36007757C8 /* Controllers */,
+				216871722886EC2E007757C8 /* Models */,
+				216871712886EC24007757C8 /* Views */,
+				216871702886EC1D007757C8 /* Screens */,
 				2168715D2886EBE5007757C8 /* GymBroApp.swift */,
-				2168715F2886EBE5007757C8 /* ContentView.swift */,
+				213772282886ED9C006A9D4A /* LayoutView.swift */,
 				216871612886EBE9007757C8 /* Assets.xcassets */,
-				216871662886EBE9007757C8 /* Persistence.swift */,
-				216871682886EBE9007757C8 /* GymBro.xcdatamodeld */,
 				216871632886EBE9007757C8 /* Preview Content */,
 			);
 			path = GymBro;
@@ -71,6 +81,40 @@
 				216871642886EBE9007757C8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		216871702886EC1D007757C8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2168715F2886EBE5007757C8 /* ContentView.swift */,
+				2137722A2886F7CD006A9D4A /* ByMuscleScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		216871712886EC24007757C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2137722E288729CB006A9D4A /* GifView.swift */,
+				213772332887313D006A9D4A /* WorkoutCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		216871722886EC2E007757C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				216871682886EBE9007757C8 /* GymBro.xcdatamodeld */,
+				216871662886EBE9007757C8 /* Persistence.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		216871732886EC36007757C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +133,8 @@
 			dependencies = (
 			);
 			name = GymBro;
+			packageProductDependencies = (
+			);
 			productName = GymBro;
 			productReference = 2168715A2886EBE5007757C8 /* GymBro.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +163,8 @@
 				Base,
 			);
 			mainGroup = 216871512886EBE5007757C8;
+			packageReferences = (
+			);
 			productRefGroup = 2168715B2886EBE5007757C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,8 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */,
 				216871672886EBE9007757C8 /* Persistence.swift in Sources */,
 				216871602886EBE5007757C8 /* ContentView.swift in Sources */,
+				213772292886ED9C006A9D4A /* LayoutView.swift in Sources */,
+				2137722B2886F7CD006A9D4A /* ByMuscleScreen.swift in Sources */,
+				2137722F288729CB006A9D4A /* GifView.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
 				2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */,
 			);

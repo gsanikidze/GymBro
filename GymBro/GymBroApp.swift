@@ -13,7 +13,7 @@ struct GymBroApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LayoutView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
