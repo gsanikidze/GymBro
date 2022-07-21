@@ -9,16 +9,30 @@ import SwiftUI
 
 struct LayoutView: View {
     var body: some View {
-        TabView {
-            ByMuscleScreen()
-                .tabItem {
-                    Label("Workouts", systemImage: "target")
+        NavigationView {
+            TabView {
+                Workouts()
+                    .tabItem {
+                        Label("Workouts", systemImage: "target")
+                    }
+                
+                Text("Favorites")
+                    .tabItem {
+                        Label("Favorites", systemImage: "heart")
+                    }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("GymBro")
+                        .font(.headline)
                 }
-            
-            Text("Favorites")
-                .tabItem {
-                    Label("Favorites", systemImage: "heart")
+                ToolbarItem {
+                    Button(action: {}) {
+                        Image(systemName: "timer")
+                    }
                 }
+            }
         }
     }
 }

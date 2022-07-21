@@ -10,25 +10,27 @@ import SwiftUI
 struct WorkoutCardView: View {
     var body: some View {
         VStack {
-            HStack (alignment: .top) {
-                VStack (alignment: .leading) {
-                    Text("3/4 sit-up")
-                        .font(.headline)
-                        .foregroundColor(Color.black)
-                        .padding(.bottom, 5)
-                    Text("Waist / ABS")
-                        .font(.caption)
-                        .foregroundColor(Color.gray)
-                }
+            HStack {
+                Image(systemName: "plus.circle")
+                    .font(.system(size: 24))
+                    .foregroundColor(Color.gray)
                 Spacer()
                 Image(systemName: "heart")
                     .font(.system(size: 24))
+                    .foregroundColor(Color.gray)
             }
             .padding(.bottom, 10)
             
             GifView()
                 .frame(width: 100, height: 100)
                 .clipped()
+            Text("3/4 sit-up")
+                .font(.headline)
+                .foregroundColor(Color.black)
+                .padding(.bottom, 5)
+            Text("Waist / ABS")
+                .font(.caption)
+                .foregroundColor(Color.gray)
         }
         .padding(15)
         .background(Color.white)
