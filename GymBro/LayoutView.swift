@@ -16,7 +16,7 @@ struct LayoutView: View {
                         Label("Workouts", systemImage: "target")
                     }
                 
-                Text("Favorites")
+                Favorites()
                     .tabItem {
                         Label("Favorites", systemImage: "heart")
                     }

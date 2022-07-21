@@ -18,6 +18,8 @@
 		216871672886EBE9007757C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216871662886EBE9007757C8 /* Persistence.swift */; };
 		2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 216871682886EBE9007757C8 /* GymBro.xcdatamodeld */; };
 		21D3E8C9288986710077D5E8 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8C8288986710077D5E8 /* TagView.swift */; };
+		21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CA288986E40077D5E8 /* Favorites.swift */; };
+		21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		216871662886EBE9007757C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		216871692886EBE9007757C8 /* GymBro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBro.xcdatamodel; sourceTree = "<group>"; };
 		21D3E8C8288986710077D5E8 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		21D3E8CA288986E40077D5E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				2168715F2886EBE5007757C8 /* ContentView.swift */,
 				2137722A2886F7CD006A9D4A /* Workouts.swift */,
+				21D3E8CA288986E40077D5E8 /* Favorites.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				2137722E288729CB006A9D4A /* GifView.swift */,
 				213772332887313D006A9D4A /* WorkoutCardView.swift */,
 				21D3E8C8288986710077D5E8 /* TagView.swift */,
+				21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,7 +203,9 @@
 				213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */,
 				216871672886EBE9007757C8 /* Persistence.swift in Sources */,
 				216871602886EBE5007757C8 /* ContentView.swift in Sources */,
+				21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */,
 				213772292886ED9C006A9D4A /* LayoutView.swift in Sources */,
+				21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */,
 				2137722B2886F7CD006A9D4A /* Workouts.swift in Sources */,
 				2137722F288729CB006A9D4A /* GifView.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
@@ -339,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
