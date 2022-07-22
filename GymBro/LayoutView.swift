@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LayoutView: View {
+    @State private var isPlannedWorkoutsPresented = false
+    
     var body: some View {
         NavigationView {
             TabView {
@@ -28,10 +30,13 @@ struct LayoutView: View {
                         .font(.headline)
                 }
                 ToolbarItem {
-                    Button(action: {}) {
+                    Button(action: { isPlannedWorkoutsPresented.toggle() }) {
                         Image(systemName: "timer")
                     }
                 }
+            }
+            .sheet(isPresented: $isPlannedWorkoutsPresented) {
+                PlannedWorkouts()
             }
         }
     }

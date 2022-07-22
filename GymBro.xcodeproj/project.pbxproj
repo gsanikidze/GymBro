@@ -20,6 +20,7 @@
 		21D3E8C9288986710077D5E8 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8C8288986710077D5E8 /* TagView.swift */; };
 		21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CA288986E40077D5E8 /* Favorites.swift */; };
 		21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */; };
+		21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		21D3E8C8288986710077D5E8 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		21D3E8CA288986E40077D5E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemView.swift; sourceTree = "<group>"; };
+		21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedWorkouts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				2168715F2886EBE5007757C8 /* ContentView.swift */,
 				2137722A2886F7CD006A9D4A /* Workouts.swift */,
 				21D3E8CA288986E40077D5E8 /* Favorites.swift */,
+				21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */,
 				2137722B2886F7CD006A9D4A /* Workouts.swift in Sources */,
 				2137722F288729CB006A9D4A /* GifView.swift in Sources */,
+				21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
 				2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */,
 				21D3E8C9288986710077D5E8 /* TagView.swift in Sources */,
