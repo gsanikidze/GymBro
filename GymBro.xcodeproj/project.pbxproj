@@ -21,6 +21,8 @@
 		21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CA288986E40077D5E8 /* Favorites.swift */; };
 		21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */; };
 		21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */; };
+		21D3E8D1288AB93A0077D5E8 /* MuscleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */; };
+		21D3E8D3288AB9D40077D5E8 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		21D3E8CA288986E40077D5E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemView.swift; sourceTree = "<group>"; };
 		21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedWorkouts.swift; sourceTree = "<group>"; };
+		21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleModel.swift; sourceTree = "<group>"; };
+		21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			children = (
 				216871682886EBE9007757C8 /* GymBro.xcdatamodeld */,
 				216871662886EBE9007757C8 /* Persistence.swift */,
+				21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */,
+				21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */,
 				216871672886EBE9007757C8 /* Persistence.swift in Sources */,
 				216871602886EBE5007757C8 /* ContentView.swift in Sources */,
+				21D3E8D3288AB9D40077D5E8 /* WorkoutModel.swift in Sources */,
 				21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */,
 				213772292886ED9C006A9D4A /* LayoutView.swift in Sources */,
 				21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */,
@@ -214,6 +221,7 @@
 				21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
 				2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */,
+				21D3E8D1288AB93A0077D5E8 /* MuscleModel.swift in Sources */,
 				21D3E8C9288986710077D5E8 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
