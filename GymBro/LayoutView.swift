@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LayoutView: View {
+    @StateObject private var vc = ViewController()
     @State private var isPlannedWorkoutsPresented = false
     
     var body: some View {
@@ -38,6 +39,8 @@ struct LayoutView: View {
             .sheet(isPresented: $isPlannedWorkoutsPresented) {
                 PlannedWorkouts()
             }
+        }.onAppear {
+            vc.fetchMuscles()
         }
     }
 }

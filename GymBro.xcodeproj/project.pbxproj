@@ -23,6 +23,10 @@
 		21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */; };
 		21D3E8D1288AB93A0077D5E8 /* MuscleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */; };
 		21D3E8D3288AB9D40077D5E8 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */; };
+		21D3E8D6288AC97E0077D5E8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D5288AC97E0077D5E8 /* Service.swift */; };
+		21D3E8D8288AE9C40077D5E8 /* LayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D7288AE9C40077D5E8 /* LayoutVC.swift */; };
+		21D3E8DA288AEF4C0077D5E8 /* WorkoutsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8D9288AEF4C0077D5E8 /* WorkoutsVC.swift */; };
+		21D3E8DD288D4A7F0077D5E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8DC288D4A7F0077D5E8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,11 @@
 		21D3E8CE288AB4DD0077D5E8 /* PlannedWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedWorkouts.swift; sourceTree = "<group>"; };
 		21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleModel.swift; sourceTree = "<group>"; };
 		21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		21D3E8D5288AC97E0077D5E8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		21D3E8D7288AE9C40077D5E8 /* LayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutVC.swift; sourceTree = "<group>"; };
+		21D3E8D9288AEF4C0077D5E8 /* WorkoutsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsVC.swift; sourceTree = "<group>"; };
+		21D3E8DB288D49680077D5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		21D3E8DC288D4A7F0077D5E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,8 @@
 		2168715C2886EBE5007757C8 /* GymBro */ = {
 			isa = PBXGroup;
 			children = (
+				21D3E8DB288D49680077D5E8 /* Info.plist */,
+				21D3E8D4288AC9610077D5E8 /* Utils */,
 				216871732886EC36007757C8 /* Controllers */,
 				216871722886EC2E007757C8 /* Models */,
 				216871712886EC24007757C8 /* Views */,
@@ -131,8 +142,19 @@
 		216871732886EC36007757C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21D3E8D7288AE9C40077D5E8 /* LayoutVC.swift */,
+				21D3E8D9288AEF4C0077D5E8 /* WorkoutsVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21D3E8D4288AC9610077D5E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				21D3E8D5288AC97E0077D5E8 /* Service.swift */,
+				21D3E8DC288D4A7F0077D5E8 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,18 +233,22 @@
 			files = (
 				213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */,
 				216871672886EBE9007757C8 /* Persistence.swift in Sources */,
+				21D3E8D8288AE9C40077D5E8 /* LayoutVC.swift in Sources */,
 				216871602886EBE5007757C8 /* ContentView.swift in Sources */,
 				21D3E8D3288AB9D40077D5E8 /* WorkoutModel.swift in Sources */,
+				21D3E8DA288AEF4C0077D5E8 /* WorkoutsVC.swift in Sources */,
 				21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */,
 				213772292886ED9C006A9D4A /* LayoutView.swift in Sources */,
 				21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */,
 				2137722B2886F7CD006A9D4A /* Workouts.swift in Sources */,
 				2137722F288729CB006A9D4A /* GifView.swift in Sources */,
 				21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */,
+				21D3E8D6288AC97E0077D5E8 /* Service.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
 				2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */,
 				21D3E8D1288AB93A0077D5E8 /* MuscleModel.swift in Sources */,
 				21D3E8C9288986710077D5E8 /* TagView.swift in Sources */,
+				21D3E8DD288D4A7F0077D5E8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +380,7 @@
 				DEVELOPMENT_TEAM = 6ANX7ZKG8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GymBro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -384,6 +411,7 @@
 				DEVELOPMENT_TEAM = 6ANX7ZKG8C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GymBro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

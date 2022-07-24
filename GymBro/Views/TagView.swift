@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TagView: View {
+    let title: String
+    
     var body: some View {
-        Text("Some")
+        Text(title)
             .foregroundColor(Color.white)
             .padding(10)
             .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.indigo))
@@ -19,7 +21,7 @@ struct TagView: View {
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView()
+        TagView(title: "Some Tag")
             .previewLayout(.sizeThatFits)
     }
 }

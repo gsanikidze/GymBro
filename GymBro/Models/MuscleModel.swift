@@ -8,12 +8,10 @@
 import Foundation
 import CoreData
 
-extension Muscle {
-    func create(_ ctx: NSManagedObjectContext, _ name: String) {
-        let muscle = Muscle()
+extension PersistenceController {
+    func createMuscle(_ ctx: NSManagedObjectContext, _ name: String) -> Void {
+        let muscle = Muscle(context: ctx)
         muscle.uid = UUID()
         muscle.name = name
-        
-        PersistenceController.shared.save(ctx)
     }
 }

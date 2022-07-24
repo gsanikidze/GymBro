@@ -8,22 +8,17 @@
 import SwiftUI
 
 struct Workouts: View {
+    @StateObject private var vc = ViewController()
+    
     private let cols = Array(repeating: GridItem(spacing: 15), count: 2)
     
     var body: some View {
         ScrollView([.vertical], showsIndicators: false) {
             ScrollView([.horizontal], showsIndicators: false) {
                 HStack {
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
-                    TagView()
+                    ForEach(vc.muscles) { muscle in
+                        TagView(title: muscle.name!)
+                    }
                 }
                 .padding(.horizontal, 15)
             }
