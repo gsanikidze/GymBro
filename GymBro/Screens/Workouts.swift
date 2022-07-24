@@ -16,8 +16,15 @@ struct Workouts: View {
         ScrollView([.vertical], showsIndicators: false) {
             ScrollView([.horizontal], showsIndicators: false) {
                 HStack {
+                    TagView(title: "All", outlined: vc.selectedMuscle != nil)
+                        .onTapGesture {
+                            vc.selectMuscle(nil)
+                        }
                     ForEach(vc.muscles) { muscle in
-                        TagView(title: muscle.name!)
+                        TagView(title: muscle.name!, outlined: muscle != vc.selectedMuscle)
+                            .onTapGesture {
+                                vc.selectMuscle(muscle)
+                            }
                     }
                 }
                 .padding(.horizontal, 15)
@@ -29,11 +36,5 @@ struct Workouts: View {
             }
             .padding(15)
         }
-    }
-}
-
-struct Workouts_Previews: PreviewProvider {
-    static var previews: some View {
-        Workouts()
     }
 }

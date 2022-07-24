@@ -12,6 +12,7 @@ extension Workouts {
     @MainActor class ViewController: ObservableObject {
         @Published var muscles: [Muscle] = []
         @Published var workouts: [Workout] = []
+        @Published var selectedMuscle: Muscle? = nil
         
         private var moc = PersistenceController.shared.container.viewContext
         private let muscleFetch = Muscle.fetchRequest()
@@ -24,6 +25,10 @@ extension Workouts {
             } catch {
                 print(error.localizedDescription)
             }
+        }
+        
+        func selectMuscle(_ muscle: Muscle?) {
+            self.selectedMuscle = muscle
         }
     }
 }
