@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WorkoutCardView: View {
+    let workout: Workout
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,14 +23,14 @@ struct WorkoutCardView: View {
             }
             .padding(.bottom, 10)
             
-            GifView()
+            GifView(workout.gifUrl!)
                 .frame(width: 100, height: 100)
                 .clipped()
-            Text("3/4 sit-up")
+            Text(workout.name!)
                 .font(.headline)
                 .foregroundColor(Color.black)
                 .padding(.bottom, 5)
-            Text("Waist / ABS")
+            Text("\(workout.bodyPart!) / \(workout.target!)")
                 .font(.caption)
                 .foregroundColor(Color.gray)
         }
@@ -36,12 +38,5 @@ struct WorkoutCardView: View {
         .background(Color.white)
         .cornerRadius(5)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
-    }
-}
-
-struct WorkoutCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutCardView()
-            .previewLayout(.sizeThatFits)
     }
 }

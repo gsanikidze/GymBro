@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-extension Workout {
-    func create(_ ctx: NSManagedObjectContext, bodyPart: String, equipment: String, gifUrl: String, id: String, name: String, muscle: Muscle) {
-        let workout = Workout()
+extension PersistenceController {
+    func createWorkout(_ ctx: NSManagedObjectContext, bodyPart: String, equipment: String, gifUrl: String, id: String, name: String, muscle: Muscle) {
+        let workout = Workout(context: ctx)
         workout.uid = UUID()
         workout.bodyPart = bodyPart
         workout.equipment = equipment
@@ -19,7 +19,14 @@ extension Workout {
         workout.name = name
         workout.muscle = muscle
         workout.target = muscle.name
-        
-        PersistenceController.shared.save(ctx)
     }
+}
+
+struct DecodableWorkout: Codable {
+    var bodyPart: String
+    var equipment: String
+    var gifUrl: String
+    var id: String
+    var name: String
+    var target: String
 }

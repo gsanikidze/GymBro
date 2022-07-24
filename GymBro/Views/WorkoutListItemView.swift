@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkoutListItemView: View {
     var body: some View {
         HStack {
-            GifView()
+            GifView("")
                 .frame(width: 50, height: 50)
             
             VStack (alignment: .leading) {

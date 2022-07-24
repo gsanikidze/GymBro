@@ -23,16 +23,9 @@ struct Workouts: View {
                 .padding(.horizontal, 15)
             }
             LazyVGrid(columns: cols, spacing: 15) {
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
-                WorkoutCardView()
+                ForEach(vc.workouts) { workout in
+                    WorkoutCardView(workout: workout)
+                }
             }
             .padding(15)
         }

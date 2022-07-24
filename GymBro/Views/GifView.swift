@@ -9,7 +9,11 @@ import SwiftUI
 import WebKit
 
 struct GifView: UIViewRepresentable {
-    let request = URLRequest(url: URL(string: "https://d205bpvrqc9yn1.cloudfront.net/0001.gif")!)
+    var request: URLRequest
+    
+    init(_ url: String) {
+        request = URLRequest(url: URL(string: url.replacingOccurrences(of: "http://", with: "https://"))!)
+    }
     
     func makeUIView(context: Context) -> WKWebView  {
         return WKWebView()
@@ -17,12 +21,5 @@ struct GifView: UIViewRepresentable {
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.load(request)
-    }
-}
-
-struct GifView_Previews: PreviewProvider {
-    static var previews: some View {
-        GifView()
-            .previewLayout(.sizeThatFits)
     }
 }

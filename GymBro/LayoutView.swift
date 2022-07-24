@@ -40,7 +40,7 @@ struct LayoutView: View {
                 PlannedWorkouts()
             }
         }.onAppear {
-            vc.fetchMuscles()
+            vc.prepareData()
         }
     }
 }
