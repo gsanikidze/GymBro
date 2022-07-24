@@ -29,6 +29,22 @@ extension Workouts {
         
         func selectMuscle(_ muscle: Muscle?) {
             self.selectedMuscle = muscle
+            self.getWorkoutsByMuscle()
+        }
+        
+        private func getWorkoutsByMuscle() {
+            var request = self.workoutsFetch
+            
+            if (selectedMuscle != nil) {
+                request = NSFetchRequest<Workout>(entityName: "Workout")
+                request.predicate = NSPredicate(format: "target = %@", self.selectedMuscle!.name!)
+            }
+            
+            do {
+                self.workouts = try self.moc.fetch(request)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }
