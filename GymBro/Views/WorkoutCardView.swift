@@ -23,18 +23,26 @@ struct WorkoutCardView: View {
             }
             .padding(.bottom, 10)
             
+            Spacer()
+            
             GifView(workout.gifUrl!)
                 .frame(width: 100, height: 100)
                 .clipped()
-            Text(workout.name!)
-                .font(.headline)
+            
+            Spacer()
+            
+            Text(workout.name!.capitalized)
+                .font(.subheadline)
                 .foregroundColor(Color.black)
-                .padding(.bottom, 5)
-            Text("\(workout.bodyPart!) / \(workout.target!)")
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 2)
+            Text("\(workout.bodyPart!.capitalized) / \(workout.target!.uppercased())")
                 .font(.caption)
                 .foregroundColor(Color.gray)
+                .multilineTextAlignment(.center)
         }
-        .padding(15)
+        .padding(10)
+        .frame(minHeight: 250)
         .background(Color.white)
         .cornerRadius(5)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
