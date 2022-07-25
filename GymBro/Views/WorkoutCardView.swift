@@ -10,6 +10,20 @@ import SwiftUI
 struct WorkoutCardView: View {
     let workout: Workout
     
+    @State private var isFav: Bool
+    
+    init(workout: Workout) {
+        self.workout = workout
+        _isFav = State(initialValue: workout.isFavorite)
+    }
+    
+    func toggleIsFav() {
+        withAnimation {
+            isFav.toggle()
+            PersistenceController.shared.toggleFavWorkout(workout)
+        }
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -17,9 +31,12 @@ struct WorkoutCardView: View {
                     .font(.system(size: 24))
                     .foregroundColor(Color.gray)
                 Spacer()
-                Image(systemName: "heart")
+                Image(systemName: "heart\(isFav ? ".fill" : "")")
                     .font(.system(size: 24))
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(isFav ? Color.pink : Color.gray)
+                    .onTapGesture {
+                        toggleIsFav()
+                    }
             }
             .padding(.bottom, 10)
             

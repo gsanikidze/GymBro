@@ -21,7 +21,7 @@ extension PersistenceController {
         workout.target = muscle.name
     }
     
-    func toggleFavWorkout(workout: Workout) {
+    func toggleFavWorkout(_ workout: Workout) {
         workout.isFavorite.toggle()
         self.save()
     }
