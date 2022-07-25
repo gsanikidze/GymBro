@@ -10,7 +10,7 @@ import SwiftUI
 struct PlannedWorkouts: View {
     @Environment(\.dismiss) private var dismiss
     
-    @ObservedObject private var vc = ViewController()
+    @StateObject private var vc = ViewController()
     
     var body: some View {
         NavigationView {

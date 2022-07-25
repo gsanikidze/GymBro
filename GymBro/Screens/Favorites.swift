@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct Favorites: View {
-    private let data = Array(repeating: UUID(), count: 3)
-    @ObservedObject private var vc = ViewController()
+    @StateObject private var vc = ViewController()
     
     var body: some View {
         List {

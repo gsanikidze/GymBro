@@ -10,14 +10,8 @@ import SwiftUI
 struct WorkoutCardView: View {
     let workout: Workout
     
-    @State private var isFav: Bool
-    @State private var isInSession: Bool
-    
-    init(workout: Workout) {
-        self.workout = workout
-        _isFav = State(initialValue: workout.isFavorite)
-        _isInSession = State(initialValue: workout.isInSession)
-    }
+    @State private var isFav = false
+    @State private var isInSession = false
     
     func toggleIsFav() {
         withAnimation {
@@ -75,5 +69,9 @@ struct WorkoutCardView: View {
         .background(Color.white)
         .cornerRadius(5)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+        .onAppear {
+            isFav = workout.isFavorite
+            isInSession = workout.isInSession
+        }
     }
 }

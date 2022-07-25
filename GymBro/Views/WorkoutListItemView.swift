@@ -10,12 +10,7 @@ import SwiftUI
 struct WorkoutListItemView: View {
     let workout: Workout
     
-    @State private var isInSession: Bool
-    
-    init(workout: Workout) {
-        self.workout = workout
-        _isInSession = State(initialValue: workout.isInSession)
-    }
+    @State private var isInSession: Bool = false
     
     func toggleIsInSession() {
         withAnimation {
@@ -48,5 +43,8 @@ struct WorkoutListItemView: View {
                 }
         }
         .padding(.vertical, 10)
+        .onAppear {
+            isInSession = workout.isInSession
+        }
     }
 }
