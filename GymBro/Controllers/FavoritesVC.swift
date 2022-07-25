@@ -22,5 +22,12 @@ extension Favorites {
                 print(error.localizedDescription)
             }
         }
+        
+        func deleteFav(_ indexSet: IndexSet) {
+            for i in indexSet {
+                PersistenceController.shared.toggleFavWorkout(workouts[i])
+                workouts.remove(at: i)
+            }
+        }
     }
 }

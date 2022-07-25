@@ -16,7 +16,7 @@ struct Favorites: View {
             ForEach(vc.workouts) { workout in
                 WorkoutListItemView(workout: workout)
             }
-            .onDelete(perform: {_ in print("Unfavorite") })
+            .onDelete(perform: {indexSet in vc.deleteFav(indexSet) })
         }
         .listStyle(.plain)
         .onAppear {
