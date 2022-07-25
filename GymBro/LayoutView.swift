@@ -14,15 +14,19 @@ struct LayoutView: View {
     var body: some View {
         NavigationView {
             TabView {
-                Workouts()
-                    .tabItem {
-                        Label("Workouts", systemImage: "target")
-                    }
-                
-                Favorites()
-                    .tabItem {
-                        Label("Favorites", systemImage: "heart")
-                    }
+                if isPlannedWorkoutsPresented {
+                    Workouts()
+                        .tabItem {
+                            Label("Workouts", systemImage: "target")
+                        }
+                    
+                    Favorites()
+                        .tabItem {
+                            Label("Favorites", systemImage: "heart")
+                        }
+                } else {
+                    Spacer()
+                }
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -42,11 +46,5 @@ struct LayoutView: View {
         }.onAppear {
             vc.prepareData()
         }
-    }
-}
-
-struct LayoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        LayoutView()
     }
 }
