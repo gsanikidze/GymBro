@@ -14,11 +14,11 @@ extension Workouts {
         @Published var workouts: [Workout] = []
         @Published var selectedMuscle: Muscle? = nil
         
-        private var moc = PersistenceController.shared.context
+        private let moc = PersistenceController.shared.context
         private let muscleFetch = Muscle.fetchRequest()
         private let workoutsFetch = Workout.fetchRequest()
         
-        init() {
+        func fetchWorkouts() {
             do {
                 self.muscles = try self.moc.fetch(self.muscleFetch)
                 self.workouts = try self.moc.fetch(self.workoutsFetch)

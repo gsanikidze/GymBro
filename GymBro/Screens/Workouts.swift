@@ -36,5 +36,8 @@ struct Workouts: View {
             }
             .padding(15)
         }
+        .onAppear {
+            vc.fetchWorkouts()
+        }
     }
 }
