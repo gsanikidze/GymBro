@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct WorkoutListItemView: View {
+    let workout: Workout
+    
     var body: some View {
         HStack {
-            GifView("")
+            GifView(workout.gifUrl!)
                 .frame(width: 50, height: 50)
             
             VStack (alignment: .leading) {
-                Text("3/4 sit up")
+                Text(workout.name!.capitalized)
                     .font(.headline)
                     .padding(.bottom, 3)
-                Text("Waist / ABS")
+                Text("\(workout.bodyPart!.capitalized) / \(workout.target!.uppercased())")
                     .font(.caption)
             }
             .padding(.leading, 5)
@@ -29,11 +31,5 @@ struct WorkoutListItemView: View {
                 .foregroundColor(Color.gray)
         }
         .padding(.vertical, 10)
-    }
-}
-
-struct WorkoutListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        WorkoutListItemView()
     }
 }

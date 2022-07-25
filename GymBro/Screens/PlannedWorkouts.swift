@@ -16,7 +16,8 @@ struct PlannedWorkouts: View {
         NavigationView {
             List {
                 ForEach(data, id: \.self) { uid in
-                    WorkoutListItemView()
+//                    WorkoutListItemView()
+                    Text("sss")
                 }
             }
             .listStyle(.plain)

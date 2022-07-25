@@ -9,20 +9,18 @@ import SwiftUI
 
 struct Favorites: View {
     private let data = Array(repeating: UUID(), count: 3)
+    @ObservedObject private var vc = ViewController()
     
     var body: some View {
         List {
-            ForEach(data, id: \.self) { uid in
-                WorkoutListItemView()
+            ForEach(vc.workouts) { workout in
+                WorkoutListItemView(workout: workout)
             }
             .onDelete(perform: {_ in print("Unfavorite") })
         }
         .listStyle(.plain)
-    }
-}
-
-struct Favorites_Previews: PreviewProvider {
-    static var previews: some View {
-        Favorites()
+        .onAppear {
+            vc.fetchFavWorkouts()
+        }
     }
 }
