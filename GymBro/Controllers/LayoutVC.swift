@@ -12,7 +12,7 @@ extension LayoutView {
     @MainActor class ViewController: ObservableObject {
         private var muscles: [Muscle] = []
         private var workouts: [Workout] = []
-        private var moc = PersistenceController.shared.container.viewContext
+        private var moc = PersistenceController.shared.context
         private let muscleFetch = Muscle.fetchRequest()
         private let workoutsFetch = Workout.fetchRequest()
         
@@ -41,10 +41,10 @@ extension LayoutView {
                     let parsedData = try JSONDecoder().decode([String].self, from: data)
                     
                     for muscle in parsedData {
-                        PersistenceController.shared.createMuscle(self.moc, muscle)
+                        PersistenceController.shared.createMuscle(muscle)
                     }
                     
-                    PersistenceController.shared.save(self.moc)
+                    PersistenceController.shared.save()
                     self.fetchFromCD()
                     self.fetchWorkouts()
                 } catch {
@@ -64,7 +64,6 @@ extension LayoutView {
                     
                     for workout in parsedData {
                         PersistenceController.shared.createWorkout(
-                            self.moc,
                             bodyPart: workout.bodyPart,
                             equipment: workout.equipment,
                             gifUrl: workout.gifUrl,
@@ -74,7 +73,7 @@ extension LayoutView {
                         )
                     }
                     
-                    PersistenceController.shared.save(self.moc)
+                    PersistenceController.shared.save()
                 } catch {
                     print(error.localizedDescription)
                 }

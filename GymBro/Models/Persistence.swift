@@ -11,6 +11,12 @@ struct PersistenceController {
     static let shared = PersistenceController()
 
     let container: NSPersistentContainer
+    
+    var context: NSManagedObjectContext {
+        get {
+            return self.container.viewContext
+        }
+    }
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "GymBro")
@@ -25,10 +31,10 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
-    func save(_ ctx: NSManagedObjectContext) {
-        if (ctx.hasChanges) {
+    func save() {
+        if (context.hasChanges) {
             do {
-                try ctx.save()
+                try context.save()
             } catch {
                 print(error.localizedDescription)
             }

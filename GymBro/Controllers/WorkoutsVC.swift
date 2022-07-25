@@ -14,7 +14,7 @@ extension Workouts {
         @Published var workouts: [Workout] = []
         @Published var selectedMuscle: Muscle? = nil
         
-        private var moc = PersistenceController.shared.container.viewContext
+        private var moc = PersistenceController.shared.context
         private let muscleFetch = Muscle.fetchRequest()
         private let workoutsFetch = Workout.fetchRequest()
         
