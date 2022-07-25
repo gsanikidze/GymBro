@@ -11,10 +11,12 @@ struct WorkoutCardView: View {
     let workout: Workout
     
     @State private var isFav: Bool
+    @State private var isInSession: Bool
     
     init(workout: Workout) {
         self.workout = workout
         _isFav = State(initialValue: workout.isFavorite)
+        _isInSession = State(initialValue: workout.isInSession)
     }
     
     func toggleIsFav() {
@@ -24,12 +26,22 @@ struct WorkoutCardView: View {
         }
     }
     
+    func toggleIsInSession() {
+        withAnimation {
+            isInSession.toggle()
+            PersistenceController.shared.toggleIsInSession(workout)
+        }
+    }
+    
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "plus.circle")
+                Image(systemName: isInSession ? "minus.circle.fill" : "plus.circle")
                     .font(.system(size: 24))
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(isInSession ? Color.indigo : Color.gray)
+                    .onTapGesture {
+                        toggleIsInSession()
+                    }
                 Spacer()
                 Image(systemName: "heart\(isFav ? ".fill" : "")")
                     .font(.system(size: 24))

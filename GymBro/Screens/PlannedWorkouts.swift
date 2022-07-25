@@ -10,14 +10,22 @@ import SwiftUI
 struct PlannedWorkouts: View {
     @Environment(\.dismiss) private var dismiss
     
-    private let data = Array(repeating: UUID(), count: 3)
+    @ObservedObject private var vc = ViewController()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(data, id: \.self) { uid in
-//                    WorkoutListItemView()
-                    Text("sss")
+                if vc.workouts.isEmpty {
+                    HStack {
+                        Spacer()
+                        Text("Session is empty")
+                            .font(.caption)
+                        Spacer()
+                    }
+                } else {
+                    ForEach(vc.workouts) { workout in
+                        WorkoutListItemView(workout: workout)
+                    }
                 }
             }
             .listStyle(.plain)
@@ -29,16 +37,18 @@ struct PlannedWorkouts: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Reset", action: {})
+                    if !vc.workouts.isEmpty {
+                        Button("Reset", action: {
+                            vc.resetSession()
+                            dismiss()
+                        })
                         .tint(.pink)
+                    }
                 }
             }
         }
-    }
-}
-
-struct PlannedWorkouts_Previews: PreviewProvider {
-    static var previews: some View {
-        PlannedWorkouts()
+        .onAppear {
+            vc.fetchWorkouts()
+        }
     }
 }

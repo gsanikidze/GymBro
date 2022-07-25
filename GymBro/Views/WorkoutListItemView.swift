@@ -10,6 +10,20 @@ import SwiftUI
 struct WorkoutListItemView: View {
     let workout: Workout
     
+    @State private var isInSession: Bool
+    
+    init(workout: Workout) {
+        self.workout = workout
+        _isInSession = State(initialValue: workout.isInSession)
+    }
+    
+    func toggleIsInSession() {
+        withAnimation {
+            isInSession.toggle()
+            PersistenceController.shared.toggleIsInSession(workout)
+        }
+    }
+    
     var body: some View {
         HStack {
             GifView(workout.gifUrl!)
@@ -26,9 +40,12 @@ struct WorkoutListItemView: View {
             
             Spacer()
             
-            Image(systemName: "plus.circle")
+            Image(systemName: isInSession ? "minus.circle.fill" : "plus.circle")
                 .font(.system(size: 24))
-                .foregroundColor(Color.gray)
+                .foregroundColor(isInSession ? Color.indigo : Color.gray)
+                .onTapGesture {
+                    toggleIsInSession()
+                }
         }
         .padding(.vertical, 10)
     }

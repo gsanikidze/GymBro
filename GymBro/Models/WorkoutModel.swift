@@ -25,6 +25,11 @@ extension PersistenceController {
         workout.isFavorite.toggle()
         self.save()
     }
+    
+    func toggleIsInSession(_ workout: Workout) {
+        workout.isInSession.toggle()
+        self.save()
+    }
 }
 
 struct DecodableWorkout: Codable {

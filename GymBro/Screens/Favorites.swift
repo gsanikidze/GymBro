@@ -13,10 +13,19 @@ struct Favorites: View {
     
     var body: some View {
         List {
-            ForEach(vc.workouts) { workout in
-                WorkoutListItemView(workout: workout)
+            if vc.workouts.isEmpty {
+                HStack {
+                    Spacer()
+                    Text("You don`t have a favorite workouts")
+                        .font(.caption)
+                    Spacer()
+                }
+            } else {
+                ForEach(vc.workouts) { workout in
+                    WorkoutListItemView(workout: workout)
+                }
+                .onDelete(perform: {indexSet in vc.deleteFav(indexSet) })
             }
-            .onDelete(perform: {indexSet in vc.deleteFav(indexSet) })
         }
         .listStyle(.plain)
         .onAppear {
