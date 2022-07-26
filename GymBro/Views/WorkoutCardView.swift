@@ -54,15 +54,19 @@ struct WorkoutCardView: View {
             
             Spacer()
             
-            Text(workout.name!.capitalized)
-                .font(.subheadline)
-                .foregroundColor(Color.black)
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 2)
-            Text("\(workout.bodyPart!.capitalized) / \(workout.target!.uppercased())")
-                .font(.caption)
-                .foregroundColor(Color.gray)
-                .multilineTextAlignment(.center)
+            NavigationLink(destination: Details()) {
+                VStack {
+                    Text(workout.name!.capitalized)
+                        .font(.subheadline)
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 2)
+                    Text("\(workout.bodyPart!.capitalized) / \(workout.target!.uppercased())")
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                }
+            }
         }
         .padding(10)
         .frame(minHeight: 250)

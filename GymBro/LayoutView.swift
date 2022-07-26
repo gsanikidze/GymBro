@@ -46,5 +46,6 @@ struct LayoutView: View {
         }.onAppear {
             vc.prepareData()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
