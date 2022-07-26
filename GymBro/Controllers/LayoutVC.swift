@@ -36,7 +36,7 @@ extension LayoutView {
                 return
             }
             
-            Service.getRequest("targetList", { data in
+            Service.getRequest(endpoint: "\(Constants.EXERCISE_API_BASE_URL)/targetList", headers: Constants.EXERCISE_API_HEADERS) { data in
                 do {
                     let parsedData = try JSONDecoder().decode([String].self, from: data)
                     
@@ -50,7 +50,7 @@ extension LayoutView {
                 } catch {
                     print(error.localizedDescription)
                 }
-            })
+            }
         }
         
         private func fetchWorkouts() {
@@ -58,7 +58,7 @@ extension LayoutView {
                 return
             }
             
-            Service.getRequest("", { data in
+            Service.getRequest(endpoint: Constants.EXERCISE_API_BASE_URL, headers: Constants.EXERCISE_API_HEADERS) { data in
                 do {
                     let parsedData = try JSONDecoder().decode([DecodableWorkout].self, from: data)
                     
@@ -77,7 +77,7 @@ extension LayoutView {
                 } catch {
                     print(error.localizedDescription)
                 }
-            })
+            }
         }
     }
 }
