@@ -11,7 +11,7 @@ import CoreData
 extension LayoutView {
     @MainActor class ViewController: ObservableObject {
         private var muscles: [Muscle] = []
-        private var workouts: [Workout] = []
+        @Published var workouts: [Workout] = []
         private var moc = PersistenceController.shared.context
         private let muscleFetch = Muscle.fetchRequest()
         private let workoutsFetch = Workout.fetchRequest()
@@ -74,6 +74,7 @@ extension LayoutView {
                     }
                     
                     PersistenceController.shared.save()
+                    self.fetchFromCD()
                 } catch {
                     print(error.localizedDescription)
                 }

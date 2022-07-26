@@ -14,7 +14,7 @@ struct LayoutView: View {
     var body: some View {
         NavigationView {
             TabView {
-                if !isPlannedWorkoutsPresented {
+                if !isPlannedWorkoutsPresented && vc.workouts.count > 0 {
                     Workouts()
                         .tabItem {
                             Label("Workouts", systemImage: "target")
