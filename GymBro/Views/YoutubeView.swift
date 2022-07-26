@@ -9,17 +9,12 @@ import SwiftUI
 
 struct YoutubeView: View {
     @Environment(\.dismiss) private var dismiss
+    var id: String
     
     var body: some View {
         GeometryReader { geo in
-            WebView("https://youtu.be/Rzi2Q9bOQNQ")
+            WebView("https://youtu.be/\(id)")
                 .frame(width: geo.size.width, height: geo.size.height)
         }
-    }
-}
-
-struct YoutubeView_Previews: PreviewProvider {
-    static var previews: some View {
-        YoutubeView()
     }
 }

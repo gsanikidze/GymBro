@@ -11,6 +11,7 @@ struct Details: View {
     @Environment(\.dismiss) private var dismiss
     private let bounds = UIScreen.main.bounds
     let workout: Workout
+    @StateObject private var vc = ViewController()
     
     @State private var isFav = false
     @State private var isInSession = false
@@ -46,14 +47,22 @@ struct Details: View {
                         .padding(.horizontal)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack (spacing: 15) {
-                            YoutubeVideoCardView()
-                                .padding(.leading)
-                            YoutubeVideoCardView()
-                            YoutubeVideoCardView()
-                            YoutubeVideoCardView()
-                            YoutubeVideoCardView()
-                                .padding(.trailing)
+                        HStack (alignment: .top, spacing: 15) {
+                            ForEach(0..<vc.videos.count, id: \.self) {i in
+                                if i == 0 {
+                                    Rectangle()
+                                        .frame(width: 15, height: 15)
+                                        .opacity(0)
+                                }
+                                
+                                YoutubeVideoCardView(video: vc.videos[i])
+                                
+                                if i == vc.videos.count - 1 {
+                                    Rectangle()
+                                        .frame(width: 15, height: 15)
+                                        .opacity(0)
+                                }
+                            }
                         }
                     }
                 }
@@ -94,6 +103,7 @@ struct Details: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
+            vc.fetchVideos(workout)
             isFav = workout.isFavorite
             isInSession = workout.isInSession
         }

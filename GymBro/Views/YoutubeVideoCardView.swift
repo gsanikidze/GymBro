@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct YoutubeVideoCardView: View {
+    let video: YoutubeVideo
     private let bounds = UIScreen.main.bounds
     
     var body: some View {
         VStack (alignment: .leading) {
-            NavigationLink(destination: YoutubeView()) {
+            NavigationLink(destination: YoutubeView(id: video.id.videoId)) {
                 ZStack {
-                    WebView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
+                    WebView(video.snippet.thumbnails.medium.url)
                         .frame(width: 320, height: 180)
                         .cornerRadius(10)
                     
@@ -23,20 +24,13 @@ struct YoutubeVideoCardView: View {
                         .foregroundColor(.white)
                 }
             }
-            Text("How To Do Decline Close Grip Bench to Skull Crusher | Exercise Demo")
+            Text(video.snippet.title)
                 .font(.headline)
                 .padding(.bottom, 2)
                 .padding(.top, 5)
-            Text("Origym Personal Trainer Courses")
+            Text(video.snippet.channelTitle)
                 .font(.caption)
         }
         .frame(width: 320)
-    }
-}
-
-struct YoutubeVideoCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        YoutubeVideoCardView()
-            .previewLayout(.sizeThatFits)
     }
 }

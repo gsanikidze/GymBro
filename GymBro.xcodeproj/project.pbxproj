@@ -21,6 +21,8 @@
 		216871652886EBE9007757C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216871642886EBE9007757C8 /* Preview Assets.xcassets */; };
 		216871672886EBE9007757C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216871662886EBE9007757C8 /* Persistence.swift */; };
 		2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 216871682886EBE9007757C8 /* GymBro.xcdatamodeld */; };
+		21B6621F289023890033BAF6 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6621E289023890033BAF6 /* DetailsVC.swift */; };
+		21B66221289023E30033BAF6 /* YoutubeVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B66220289023E30033BAF6 /* YoutubeVideoModel.swift */; };
 		21D3E8C9288986710077D5E8 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8C8288986710077D5E8 /* TagView.swift */; };
 		21D3E8CB288986E40077D5E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CA288986E40077D5E8 /* Favorites.swift */; };
 		21D3E8CD2889998D0077D5E8 /* WorkoutListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */; };
@@ -49,6 +51,8 @@
 		216871642886EBE9007757C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		216871662886EBE9007757C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		216871692886EBE9007757C8 /* GymBro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBro.xcdatamodel; sourceTree = "<group>"; };
+		21B6621E289023890033BAF6 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		21B66220289023E30033BAF6 /* YoutubeVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoModel.swift; sourceTree = "<group>"; };
 		21D3E8C8288986710077D5E8 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		21D3E8CA288986E40077D5E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				216871662886EBE9007757C8 /* Persistence.swift */,
 				21D3E8D0288AB93A0077D5E8 /* MuscleModel.swift */,
 				21D3E8D2288AB9D40077D5E8 /* WorkoutModel.swift */,
+				21B66220289023E30033BAF6 /* YoutubeVideoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				21D3E8D9288AEF4C0077D5E8 /* WorkoutsVC.swift */,
 				21351A7F288E8D3100D2B1B0 /* FavoritesVC.swift */,
 				21351A81288E980800D2B1B0 /* PlannedWorkoutsVC.swift */,
+				21B6621E289023890033BAF6 /* DetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 				2137722B2886F7CD006A9D4A /* Workouts.swift in Sources */,
 				2137722F288729CB006A9D4A /* WebView.swift in Sources */,
 				21351A82288E980800D2B1B0 /* PlannedWorkoutsVC.swift in Sources */,
+				21B66221289023E30033BAF6 /* YoutubeVideoModel.swift in Sources */,
 				21D3E8CF288AB4DD0077D5E8 /* PlannedWorkouts.swift in Sources */,
 				21D3E8D6288AC97E0077D5E8 /* Service.swift in Sources */,
 				2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */,
+				21B6621F289023890033BAF6 /* DetailsVC.swift in Sources */,
 				2168716A2886EBE9007757C8 /* GymBro.xcdatamodeld in Sources */,
 				21D3E8D1288AB93A0077D5E8 /* MuscleModel.swift in Sources */,
 				21D3E8C9288986710077D5E8 /* TagView.swift in Sources */,

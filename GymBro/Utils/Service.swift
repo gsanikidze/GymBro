@@ -8,8 +8,27 @@
 import Foundation
 
 struct Service {
-    static func getRequest(endpoint: String, headers: [String: String]? = [:], onSuccess: @escaping (_ rawData: Data) -> Void) {
-        let url = URL(string: endpoint)!
+    static func getRequest(endpoint: String, headers: [String: String]? = [:], query: [String: String]? = [:], onSuccess: @escaping (_ rawData: Data) -> Void) {
+        var url: URL
+        
+        if query != nil {
+            var urlSt: String = ""
+            
+            for (key, value) in query! {
+                let queryVal = "\(key)=\(value.replacingOccurrences(of: " ", with: "%20"))"
+                
+                if urlSt.isEmpty {
+                    urlSt += "\(endpoint)?\(queryVal)"
+                } else {
+                    urlSt += "&\(queryVal)"
+                }
+            }
+            
+            url = URL(string: urlSt)!
+        } else {
+            url = URL(string: endpoint)!
+        }
+        
         var request = URLRequest(url: url)
         
         if headers != nil {
