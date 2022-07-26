@@ -20,7 +20,7 @@ struct WorkoutListItemView: View {
     }
     
     var body: some View {
-        NavigationLink(destination: Details()) {
+        NavigationLink(destination: Details(workout: workout)) {
             HStack {
                 WebView(workout.gifUrl!)
                     .frame(width: 50, height: 50)

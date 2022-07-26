@@ -54,7 +54,7 @@ struct WorkoutCardView: View {
             
             Spacer()
             
-            NavigationLink(destination: Details()) {
+            NavigationLink(destination: Details(workout: workout)) {
                 VStack {
                     Text(workout.name!.capitalized)
                         .font(.subheadline)

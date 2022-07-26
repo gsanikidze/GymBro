@@ -10,6 +10,24 @@ import SwiftUI
 struct Details: View {
     @Environment(\.dismiss) private var dismiss
     private let bounds = UIScreen.main.bounds
+    let workout: Workout
+    
+    @State private var isFav = false
+    @State private var isInSession = false
+    
+    func toggleIsFav() {
+        withAnimation {
+            isFav.toggle()
+            PersistenceController.shared.toggleFavWorkout(workout)
+        }
+    }
+    
+    func toggleIsInSession() {
+        withAnimation {
+            isInSession.toggle()
+            PersistenceController.shared.toggleIsInSession(workout)
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -17,7 +35,7 @@ struct Details: View {
                 VStack (spacing: 15) {
                     HStack {
                         Spacer()
-                        WebView("http://d205bpvrqc9yn1.cloudfront.net/0001.gif")
+                        WebView(workout.gifUrl!)
                             .frame(width: bounds.width - 150, height: bounds.width - 150)
                             .cornerRadius(10)
                         Spacer()
@@ -47,27 +65,37 @@ struct Details: View {
                 }
                 
                 ToolbarItem (placement: .principal) {
-                    VStack {
-                        Text("Workout title")
+                    VStack(spacing: 3) {
+                        Text(workout.name!.capitalized)
                             .font(.headline)
-                        Text("Workout desc")
+                        Text("\(workout.bodyPart!.capitalized) | \(workout.target!.uppercased())")
                             .font(.caption)
                     }
                 }
                 
+                
                 ToolbarItem {
-                    Image(systemName: "heart")
+                    Image(systemName: isInSession ? "minus.circle.fill" : "plus.circle")
+                        .font(.system(size: 15))
+                        .foregroundColor(isInSession ? Color.indigo : Color.gray)
+                        .onTapGesture {
+                            toggleIsInSession()
+                        }
                 }
                 ToolbarItem {
-                    Image(systemName: "plus.circle")
+                    Image(systemName: "heart\(isFav ? ".fill" : "")")
+                        .font(.system(size: 15))
+                        .foregroundColor(isFav ? Color.pink : Color.gray)
+                        .onTapGesture {
+                            toggleIsFav()
+                        }
                 }
             }
-        }.navigationBarBackButtonHidden(true)
-    }
-}
-
-struct Details_Previews: PreviewProvider {
-    static var previews: some View {
-        Details()
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
+            isFav = workout.isFavorite
+            isInSession = workout.isInSession
+        }
     }
 }
