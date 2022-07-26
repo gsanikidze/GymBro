@@ -22,7 +22,7 @@ struct WorkoutListItemView: View {
     var body: some View {
         NavigationLink(destination: Details()) {
             HStack {
-                GifView(workout.gifUrl!)
+                WebView(workout.gifUrl!)
                     .frame(width: 50, height: 50)
                 
                 VStack (alignment: .leading) {

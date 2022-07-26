@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct GifView: UIViewRepresentable {
+struct WebView: UIViewRepresentable {
     var request: URLRequest
     
     init(_ url: String) {

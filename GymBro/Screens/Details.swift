@@ -17,7 +17,7 @@ struct Details: View {
                 VStack (spacing: 15) {
                     HStack {
                         Spacer()
-                        GifView("http://d205bpvrqc9yn1.cloudfront.net/0001.gif")
+                        WebView("http://d205bpvrqc9yn1.cloudfront.net/0001.gif")
                             .frame(width: bounds.width - 150, height: bounds.width - 150)
                             .cornerRadius(10)
                         Spacer()
@@ -30,13 +30,14 @@ struct Details: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack (spacing: 15) {
                             YoutubeVideoCardView()
+                                .padding(.leading)
                             YoutubeVideoCardView()
                             YoutubeVideoCardView()
                             YoutubeVideoCardView()
                             YoutubeVideoCardView()
+                                .padding(.trailing)
                         }
                     }
-                    .padding(.leading)
                 }
             }
             .navigationBarBackButtonHidden(true)
