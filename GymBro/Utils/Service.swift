@@ -8,7 +8,7 @@
 import Foundation
 
 struct Service {
-    static func getRequest(endpoint: String, headers: [String: String]? = [:], query: [String: String]? = nil, onSuccess: @escaping (_ rawData: Data) -> Void) {
+    static func getRequest(endpoint: String, headers: [String: String]? = nil, query: [String: String]? = nil, onSuccess: @escaping (_ rawData: Data) -> Void) {
         var url: URL
         
         if query != nil {
