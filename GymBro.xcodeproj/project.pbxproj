@@ -14,6 +14,7 @@
 		2137722F288729CB006A9D4A /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2137722E288729CB006A9D4A /* GifView.swift */; };
 		213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213772332887313D006A9D4A /* WorkoutCardView.swift */; };
 		21459CEF288FE5D5009BF482 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21459CEE288FE5D5009BF482 /* Details.swift */; };
+		21459CF1289004AB009BF482 /* YoutubeVideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21459CF0289004AB009BF482 /* YoutubeVideoCardView.swift */; };
 		2168715E2886EBE5007757C8 /* GymBroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168715D2886EBE5007757C8 /* GymBroApp.swift */; };
 		216871622886EBE9007757C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216871612886EBE9007757C8 /* Assets.xcassets */; };
 		216871652886EBE9007757C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216871642886EBE9007757C8 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		2137722E288729CB006A9D4A /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		213772332887313D006A9D4A /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
 		21459CEE288FE5D5009BF482 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		21459CF0289004AB009BF482 /* YoutubeVideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoCardView.swift; sourceTree = "<group>"; };
 		2168715A2886EBE5007757C8 /* GymBro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymBro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2168715D2886EBE5007757C8 /* GymBroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymBroApp.swift; sourceTree = "<group>"; };
 		216871612886EBE9007757C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				213772332887313D006A9D4A /* WorkoutCardView.swift */,
 				21D3E8C8288986710077D5E8 /* TagView.swift */,
 				21D3E8CC2889998D0077D5E8 /* WorkoutListItemView.swift */,
+				21459CF0289004AB009BF482 /* YoutubeVideoCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21351A80288E8D3100D2B1B0 /* FavoritesVC.swift in Sources */,
+				21459CF1289004AB009BF482 /* YoutubeVideoCardView.swift in Sources */,
 				213772342887313D006A9D4A /* WorkoutCardView.swift in Sources */,
 				216871672886EBE9007757C8 /* Persistence.swift in Sources */,
 				21D3E8D8288AE9C40077D5E8 /* LayoutVC.swift in Sources */,

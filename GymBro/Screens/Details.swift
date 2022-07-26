@@ -24,26 +24,16 @@ struct Details: View {
                     }
                     
                     Text("Videos")
-                        .font(.headline)
+                        .font(.title2)
                         .padding(.horizontal)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack (spacing: 15) {
-                            GifView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
-                                .frame(width: 320, height: 180)
-                                .cornerRadius(10)
-                            GifView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
-                                .frame(width: 320, height: 180)
-                                .cornerRadius(10)
-                            GifView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
-                                .frame(width: 320, height: 180)
-                                .cornerRadius(10)
-                            GifView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
-                                .frame(width: 320, height: 180)
-                                .cornerRadius(10)
-                            GifView("https://i.ytimg.com/vi/MLfXovxCx6M/mqdefault.jpg")
-                                .frame(width: 320, height: 180)
-                                .cornerRadius(10)
+                            YoutubeVideoCardView()
+                            YoutubeVideoCardView()
+                            YoutubeVideoCardView()
+                            YoutubeVideoCardView()
+                            YoutubeVideoCardView()
                         }
                     }
                     .padding(.leading)
